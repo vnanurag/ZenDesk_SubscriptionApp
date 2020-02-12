@@ -29,12 +29,28 @@ export const PLAN_COSTS = {
     cost:  50
   };
 
+  // [GET]'/api/current'
   export const getData = () => {
       return new Promise((resolve, reject) => {
         resolve(storedSubscription)
       })
   }
 
+  // 'api/preview
+  export const previewData = (settings) => {
+      let newData = {
+        plan:  settings.data.plan,
+        name:  PLAN_NAMES[settings.data.plan],
+        seats: settings.data.seats,
+        cost:  settings.data.seats * PLAN_COSTS[settings.data.plan]
+      }
+      
+      return new Promise((resolve, reject) => {
+        resolve(newData);
+    })
+  }
+
+  // [PUT]'api/current
   export const updateData = (settings) => {
     let newData = {
         plan:  settings.data.plan,
@@ -47,18 +63,5 @@ export const PLAN_COSTS = {
 
     return new Promise((resolve, reject) =>{
       resolve(newData);
-    })
-  }
-
-  export const submitData = (settings) => {
-      let newData = {
-        plan:  settings.data.plan,
-        name:  PLAN_NAMES[settings.data.plan],
-        seats: settings.data.seats,
-        cost:  settings.data.seats * PLAN_COSTS[settings.data.plan]
-      }
-      
-      return new Promise((resolve, reject) => {
-        resolve(newData);
     })
   }

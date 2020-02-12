@@ -102,13 +102,13 @@ export const getData = () => (dispatch) =>{
 }
 
 export const planChange = (data) => (dispatch) =>{
-    return Api.updateData(data)
+    return Api.previewData(data)
                 .then((response) => dispatch(PlanChangeSuccess(response)))
                 .catch((error) => dispatch(PlanChangeFailure(error)))
 }
 
 export const seatsChange = (data) => (dispatch) =>{
-    return Api.updateData(data)
+    return Api.previewData(data)
                 .then((response) => dispatch(SeatsChangeSuccess(response)))
                 .catch((error) => dispatch(SeatsChangeFailure(error)))
 }

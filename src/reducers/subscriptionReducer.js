@@ -13,7 +13,7 @@ const subscriptionReducer = (state = intialStore, action) => {
     switch(action.type){
         case "INITIAL_STATE":
             return {
-                state
+                intialStore
             }
         case 'GET_DATA_SUCCESS':{
             const payload = action.payload;

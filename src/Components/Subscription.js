@@ -79,6 +79,7 @@ class Subscription extends React.Component{
             if(e.target.value === this.props.plans[p]){
                 return p;
             }
+            else return ''
         })
         this.setState({
             inputChanged: true,
@@ -97,7 +98,8 @@ class Subscription extends React.Component{
     handleSeatsChange = (e) => {
         if(isNaN(Number(e.target.value)) || Number(e.target.value) < 0 || isNaN(parseInt(e.target.value))){
             this.setState({
-                inputChanged: false
+                inputChanged: false,
+                seats: ''
             })
         }
         else{
