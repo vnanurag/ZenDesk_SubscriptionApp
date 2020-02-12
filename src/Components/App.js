@@ -1,7 +1,7 @@
 import React from 'react';
 import Subscription from './Subscription'
 import SubscriptionOverview from './SubscriptionOverview'
-import {PLAN_COSTS, PLAN_NAMES} from '../Server/data'
+import {PLAN_COSTS, PLAN_NAMES, CURRENCIES} from '../Server/data'
 import {connect} from 'react-redux'
 import * as Actions from '../reducers/subscriptionReducer'
 
@@ -68,6 +68,7 @@ class App extends React.Component{
                       store={this.props.store}
                       plans={PLAN_NAMES}
                       costs={PLAN_COSTS}
+                      currencies={CURRENCIES}
                       handlePlanChange={this.onPlanChange}
                       handleSeatsChange={this.onSeatsChange}
                       handlePrevData={this.onHandlePrevData}

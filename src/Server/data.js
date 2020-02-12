@@ -13,6 +13,13 @@ export const PLAN_COSTS = {
     better: 'Better',
     best:   'Best'
   }
+
+  export const CURRENCIES = {
+    usd: 'USD',
+    pound: 'GBP',
+    euro: 'EUR',
+    inr: 'INR'
+  }
   
   let prevSubscription;
   let storedSubscription = {
