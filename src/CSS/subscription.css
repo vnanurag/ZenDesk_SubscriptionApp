@@ -1,0 +1,154 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #444444;
+    background-color: #f8f8f8;
+}
+
+#subscription{
+     height: 500px;
+     margin-top: 80px;
+     margin-left: 50px;
+}
+
+#subscription h2{
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#subscription .product{
+  width: 400px;
+  vertical-align: top;
+  padding: 20px 0 30px 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#subscription label{
+  padding: 5px 0;
+  color: #888888;
+}
+
+#subscription .edit-plan{
+  display: inline-block;
+  width: 125px;
+}
+
+#subscription .edit-plan #plan-dropdown{
+  width: 80px;
+  padding: 5px;
+}
+
+#subscription .edit-seats{
+  display: inline-block;
+  width: 100px;
+}
+
+#subscription .edit-seats #seatsInput{
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;;
+}
+
+#subscription .price{
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 50px;
+}
+
+#subscription .price #price-value{
+  padding-top: 8px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+}
+
+#subscription .price label {
+  padding-left: 10px;
+}
+
+/* #subscription .button-section{
+  width: 400px;
+  text-align: right;
+  margin-top: 20px;
+} */
+
+#subscription #submit-button{
+  padding: 10px 25px;
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 200px;
+
+}
+
+#overview{
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+#overview .row{
+  width: 800px;
+}
+
+#overview h4{
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+#overview .subscription-overview{
+  display: inline-block;
+  width: 200px;
+  padding: 25px 0 30px 40px;
+  background-color: white;
+  margin-left: 25px;
+  border-radius: 10px;
+}
+
+#overview .subscription-overview .old-label{
+  display: inline-block;
+  width: 75px;
+  color: #bbbbbb;
+}
+
+#overview .subscription-overview .old-value{
+  color: #888888;
+  font-weight: 600;
+}
+
+#overview .subscription-overview .new-label{
+  display: inline-block;
+  width: 75px;
+  color: #bbbbbb;
+}
+
+#overview .subscription-overview .new-value{
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* #overview .button-section{
+  margin-top: 20px;
+  margin-left: 320px;
+  padding-left: 30px;
+} */
+
+#back-button{
+  margin-top: 20px;
+  margin-left: 365px;
+}
+
+.loading{
+  width: 400px;
+  vertical-align: top;
+  padding: 20px 0 30px 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  background-color: white;
+  margin: 20px;
+}
