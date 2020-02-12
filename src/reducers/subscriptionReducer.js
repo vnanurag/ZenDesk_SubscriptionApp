@@ -1,5 +1,3 @@
-import * as Api from '../Server/data';
-import { GetDataSuccess, GetDataFailure, PlanChangeSuccess, PlanChangeFailure, SeatsChangeSuccess, SeatsChangeFailure, SubmitSucess, SubmitFailure, Back, PrevData, UpdateSuccess, UpdateFailure } from '../redux/actions';
 
 let intialStore = {
     plan: '',
@@ -102,38 +100,6 @@ const subscriptionReducer = (state = intialStore, action) => {
             return state;
         }    
     }
-}
- 
-export const getData = () => (dispatch) =>{
-    return Api.getData()
-                .then((response) => dispatch(GetDataSuccess(response)))
-                .catch((error) => dispatch(GetDataFailure(error)))
-}
-
-export const planChange = (data) => (dispatch) =>{
-    return Api.updateData(data)
-                .then((response) => dispatch(PlanChangeSuccess(response)))
-                .catch((error) => dispatch(PlanChangeFailure(error)))
-}
-
-export const seatsChange = (data) => (dispatch) =>{
-    return Api.updateData(data)
-                .then((response) => dispatch(SeatsChangeSuccess(response)))
-                .catch((error) => dispatch(SeatsChangeFailure(error)))
-}
-
-export const update = (data) => (dispatch) =>{
-    return Api.updateData(data)
-                .then((response) => dispatch(UpdateSuccess(response)))
-                .catch((error) => dispatch(UpdateFailure(error)))
-}
-
-export const back = () => (dispatch) => {
-    dispatch(Back());
-}
-
-export const prevData = (data) => (dispatch) => {
-    dispatch(PrevData(data));
-}
+} 
 
 export default subscriptionReducer;

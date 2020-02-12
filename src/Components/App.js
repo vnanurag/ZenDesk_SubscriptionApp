@@ -3,7 +3,7 @@ import Subscription from './Subscription'
 import SubscriptionOverview from './SubscriptionOverview'
 import {PLAN_COSTS, PLAN_NAMES, CURRENCIES} from '../Server/data'
 import {connect} from 'react-redux'
-import * as Actions from '../reducers/subscriptionReducer'
+import * as Actions from '../redux/actions'
 
 class App extends React.Component{
   constructor(props){

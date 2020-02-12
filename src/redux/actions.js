@@ -1,3 +1,7 @@
+import * as Api from '../Server/data';
+
+// Action Creators
+
 export const InitialState = (data) => {
     return {
         type: 'INITIAL_STATE',
@@ -87,4 +91,38 @@ export const PrevData = (data) => {
         type: 'PREVIOUS_SUBSCRIPTION_SUCCESS',
         payload: data
     }
+}
+
+// Actions
+
+export const getData = () => (dispatch) =>{
+    return Api.getData()
+                .then((response) => dispatch(GetDataSuccess(response)))
+                .catch((error) => dispatch(GetDataFailure(error)))
+}
+
+export const planChange = (data) => (dispatch) =>{
+    return Api.updateData(data)
+                .then((response) => dispatch(PlanChangeSuccess(response)))
+                .catch((error) => dispatch(PlanChangeFailure(error)))
+}
+
+export const seatsChange = (data) => (dispatch) =>{
+    return Api.updateData(data)
+                .then((response) => dispatch(SeatsChangeSuccess(response)))
+                .catch((error) => dispatch(SeatsChangeFailure(error)))
+}
+
+export const update = (data) => (dispatch) =>{
+    return Api.updateData(data)
+                .then((response) => dispatch(UpdateSuccess(response)))
+                .catch((error) => dispatch(UpdateFailure(error)))
+}
+
+export const back = () => (dispatch) => {
+    dispatch(Back());
+}
+
+export const prevData = (data) => (dispatch) => {
+    dispatch(PrevData(data));
 }

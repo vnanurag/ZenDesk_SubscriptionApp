@@ -1,7 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import '../Server/mockjax'
 
 class Subscription extends React.Component{
     constructor(props){
@@ -96,7 +95,7 @@ class Subscription extends React.Component{
     }
 
     handleSeatsChange = (e) => {
-        if(isNaN(parseInt(e.target.value)) || parseInt(e.target.value)<0){
+        if(isNaN(Number(e.target.value)) || Number(e.target.value) < 0 || isNaN(parseInt(e.target.value))){
             this.setState({
                 inputChanged: false
             })
