@@ -78,7 +78,10 @@ body{
   width: 200px;
   margin-top: 20px;
   margin-left: 200px;
+}
 
+#subscription #submit-button:disabled{
+  cursor: auto;
 }
 
 #overview{
